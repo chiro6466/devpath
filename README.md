@@ -44,8 +44,8 @@ pip install devpath
         └── ... (Other packages in development)
 
 ```python
-import devpath       # The hook is now activated.
-import pak1          # Loads 'pak1' from your source folder (packs_repo/pak1/)
+import devpath             # The hook is now activated.
+import pak1                # Loads 'pak1' from your source folder (paks_repo/pak1/)
 
 pak1.run_my_new_feature()
 # ... Modify pak1/code.py and run the script again—the new code is instantly loaded.
