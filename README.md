@@ -43,7 +43,7 @@ pip install devpath
     └── 📦 pak2/
         └── ... (Other packages in development)
 
-``` bash
+``` 
 import devpath             <-- The hook is now activated.
 import pak1   <-- Loads 'pak1' from your source folder (packs_repo/pak1/)
 
