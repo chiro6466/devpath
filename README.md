@@ -42,6 +42,8 @@ pip install devpath
     │
     └── 📦 pak2/
         └── ... (Other packages in development)
+Use the import in your script:
+
 ```python
 # In my_test_script.py
 import devpath             # 1. Activates the hook.
