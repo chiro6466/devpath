@@ -29,15 +29,15 @@ The core of `devpath` is a single, concise function executed upon module import.
 
 Install the hook once in your development environment:
 
-\`\`\`bash
+```bash
 pip install devpath
-\`\`\`
+```
 
 ### 2\. Structure
 
 Your project needs this structure to work:
 
-\`\`\`text
+```text
 📦 Proyect_folder/ (The project root)
 ├── 📝 my_test_script.py  <-- Your test script that runs the code.
 |
@@ -48,17 +48,17 @@ Your project needs this structure to work:
     │
     └── 📦 pak2/
         └── ... (Other packages in development)
-\`\`\`
+```
 
 ### 3\. Execution
 
 Use the import in your test script (`my_test_script.py`):
 
-\`\`\`python
+```python
 # In my_test_script.py
 import devpath             # 1. Activates the hook.
 import pak1                # 2. Imports your package directly.
 
 pak1.run_my_new_feature() 
 # ... Modify pak1/code.py and run the script again—the new code is instantly loaded.
-\`\`\`
+```
