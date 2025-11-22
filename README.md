@@ -1,3 +1,4 @@
+```markdown
 # 🎣 devpath: The Zero-Config Python Development Hook
 
 **devpath** is a minimal, ultra-efficient utility designed to eliminate development friction when testing Python packages. It provides an instant, self-configuring "editable install" experience without requiring external command-line tools like `pip install -e .` or complex environments.
@@ -18,38 +19,46 @@ The core of `devpath` is a single, concise function executed upon module import.
 
 ### Benefits
 
-* **Zero Configuration:** No `pip install -e .` necessary in your workflow.
-* **Instant Updates:** Code changes are reflected immediately on re-execution.
-* **Minimal Footprint:** The entire library is one file (`__init__.py`).
+  * **Zero Configuration:** No `pip install -e .` necessary in your workflow.
+  * **Instant Updates:** Code changes are reflected immediately on re-execution.
+  * **Minimal Footprint:** The entire library is one file (`__init__.py`).
 
 ## 🚀 Usage
 
-### 1. Installation
+### 1\. Installation
 
 Install the hook once in your development environment:
 
-```bash
+\`\`\`bash
 pip install devpath
+\`\`\`
 
-### 2. Structure
+### 2\. Structure
 
 Your project needs this structure to work:
 
-```text
+\`\`\`text
 📦 Proyect_folder/ (The project root)
-├── 📝 my_test_script.py  <-- Your test script that runs the code.
+├── 📝 my_test_script.py  <-- Your test script that runs the code.
 |
-└── 📁 paks_repo/         <-- Your SOURCE CODE that you edit.
-    ├── 📦 pak1/           <-- Your package (e.g., your library code).
-    │   ├── __init__.py
-    │   └── code.py
-    │
-    └── 📦 pak2/
-        └── ... (Other packages in development)
+└── 📁 paks_repo/         <-- Your SOURCE CODE that you edit.
+    ├── 📦 pak1/           <-- Your package (e.g., your library code).
+    │   ├── __init__.py
+    │   └── code.py
+    │
+    └── 📦 pak2/
+        └── ... (Other packages in development)
+\`\`\`
 
+### 3\. Execution
+
+Use the import in your test script (`my_test_script.py`):
+
+\`\`\`python
 # In my_test_script.py
-import devpath             # 1. Activates the hook.
-import pak1                # 2. Imports your package directly.
+import devpath             # 1. Activates the hook.
+import pak1                # 2. Imports your package directly.
 
 pak1.run_my_new_feature() 
 # ... Modify pak1/code.py and run the script again—the new code is instantly loaded.
+\`\`\`
