@@ -44,10 +44,13 @@ pip install devpath
         └── ... (Other packages in development)
 Use the import in your script:
 
+Use the import in your script:
+
+(Línea completamente vacía aquí)
 ```python
 # In my_test_script.py
-import devpath # 1.Activates the hook.
-import pak1 # 2.Imports your package directly.
+import devpath             # 1. Activates the hook.
+import pak1                # 2. Imports your package directly.
 
 pak1.run_my_new_feature()
 # ... Modify pak1/code.py and run the script again—the new code is instantly loaded.
