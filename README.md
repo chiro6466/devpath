@@ -30,3 +30,21 @@ Install the hook once in your development environment:
 
 ```bash
 pip install devpath
+
+📦 Proyect_folder/ (The project root)
+├── 📝 my_test_script.py  <-- Your test script that runs the code.
+|
+└── 📁 paks_repo/         <-- Your SOURCE CODE that you edit.
+    ├── 📦 pak1/           <-- Your package (e.g., your library code).
+    │   ├── __init__.py
+    │   └── code.py
+    │
+    └── 📦 pak2/
+        └── ... (Other packages in development)
+
+# In my_test_script.py
+import devpath             # 1. Activates the hook.
+import pak1                # 2. Imports your package directly.
+
+pak1.run_my_new_feature() 
+# ... Modify pak1/code.py and run the script again—the new code is instantly loaded.
