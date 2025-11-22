@@ -42,10 +42,10 @@ pip install devpath
     │
     └── 📦 pak2/
         └── ... (Other packages in development)
-
 ```python
-import devpath             # The hook is now activated.
-import pak1                # Loads 'pak1' from your source folder (paks_repo/pak1/)
+# In my_test_script.py
+import devpath             # 1. Activates the hook.
+import pak1                # 2. Imports your package directly.
 
-pak1.run_my_new_feature()
+pak1.run_my_new_feature() 
 # ... Modify pak1/code.py and run the script again—the new code is instantly loaded.
