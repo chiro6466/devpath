@@ -31,6 +31,11 @@ Install the hook once in your development environment:
 ```bash
 pip install devpath
 
+### 2. Structure
+
+Your project needs this structure to work:
+
+```text
 📦 Proyect_folder/ (The project root)
 ├── 📝 my_test_script.py  <-- Your test script that runs the code.
 |
